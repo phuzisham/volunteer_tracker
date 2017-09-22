@@ -5,11 +5,11 @@ class Volunteer
   def initialize(attributes)
     @name = attributes.fetch(:name)
     @project_id = attributes.fetch(:project_id)
-    @id = attributes.fetch(:id)
+    @id = nil
   end
 
   def save()
-    result = DB.exec("INSERT INTO volunteers (name) VALUES ('#{@name}') RETURNING id;")
+    result = DB.exec("INSERT INTO volunteers (name, project_id) VALUES ('#{@name}', #{@project_id}) RETURNING id;")
     @id = result.first().fetch("id").to_i()
   end
 
@@ -32,6 +32,7 @@ class Volunteer
   def self.find(id)
     result = DB.exec("SELECT * FROM volunteers WHERE id = #{id};")
     name = result.first().fetch("name")
-    Volunteer.new({:name => name, :id => id})
+    project_id = result.first().fetch("project_id")
+    Volunteer.new({:name => name, :project_id => project_id, :id => id})
   end
 end
