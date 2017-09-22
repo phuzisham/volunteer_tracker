@@ -1,0 +1,16 @@
+<h1> Update the <%=@project.title() %> project </h1>
+
+<form action="/project/<%= @project.id() %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label for="title">Rename your project:</label>
+  <input type="text" name="title" id="title">
+
+  <button type="submit">Update Project</button>
+</form>
+
+<!-- <form action="/project_update" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit">Delete project</button>
+</form> -->
