@@ -45,3 +45,11 @@ get("/volunteer/:id") do
   @volunteer = Volunteer.find(params.fetch("id").to_i())
   erb(:volunteer)
 end
+
+patch("/volunteer/:id") do
+  name = params.fetch('name')
+  @volunteer = Volunteer.find(params.fetch("id").to_i())
+  @volunteer.update({:name => name})
+  @volunteers = Volunteer.all()
+  erb(:volunteer)
+end
