@@ -38,5 +38,10 @@ delete(("/project/:id")) do
   @project = Project.find(params.fetch("id").to_i())
   @project.delete()
   @projects = Project.all()
-erb(:index)
+  erb(:index)
+end
+
+get("/volunteer/:id") do
+  @volunteer = Volunteer.find(params.fetch("id").to_i())
+  erb(:volunteer)
 end

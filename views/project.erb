@@ -1,16 +1,41 @@
-<h1> Update the <%=@project.title() %> project </h1>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <h3> Update the <%=@project.title() %> project:</h3>
 
-<form action="/project/<%= @project.id() %>" method="post">
-  <input type="hidden" name="_method" value="patch">
+      <form action="/project/<%= @project.id() %>" method="post">
+        <input type="hidden" name="_method" value="patch">
 
-  <label for="title">Rename your project:</label>
-  <input type="text" name="title" id="title">
+        <label for="title">Rename your project:</label>
+        <input type="text" name="title" id="title">
 
-  <button type="submit">Update Project</button>
-</form>
+        <button type="submit">Update Project</button>
+      </form>
+      <br>
+      <form action="/project/<%= @project.id() %>" method="post">
+        <input name="_method" type="hidden" value="delete">
+        <label for="delete">Delete your project:</label>
+        <button type="submit">Delete Project</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="well">
+      <h1><%= @project.title() %></h1>
 
-<form action="/project/<%= @project.id() %>" method="post">
-  <input name="_method" type="hidden" value="delete">
+      <% if @project.volunteers().any?() %>
+        <h3>Here are all the volunteers in this project:</h3>
 
-  <button type="submit">Delete Project</button>
-</form>
+        <ul>
+          <% @project.volunteers().each() do |volunteer| %>
+            <li><a href="/volunteer/<%= volunteer.id() %>"><%= volunteer.name() %></a></li>
+          <% end %>
+        </ul>
+
+        <% else %>
+          <p>There are no volunteers on this project!</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+<a href="/"><button class="btn">Home</a>
