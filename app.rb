@@ -53,3 +53,9 @@ patch("/volunteer/:id") do
   @volunteers = Volunteer.all()
   erb(:volunteer)
 end
+
+delete("/volunteer/:id") do
+  @volunteer = Volunteer.find(params.fetch("id").to_i())
+  @volunteer.delete()
+  erb(:removed)
+end

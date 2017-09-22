@@ -8,4 +8,10 @@
   <button type="submit">Update Volunteer</button>
 </form>
 
+<form action="/volunteer/<%= @volunteer.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <label for="delete">Delete this volunteer:</label>
+  <button type="submit">Delete Volunteer</button>
+</form>
+
 <a href="/"><button class="btn">Home</a>
