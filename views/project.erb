@@ -4,18 +4,30 @@
       <h3> Update the <%=@project.title() %> project:</h3>
 
       <form action="/project/<%= @project.id() %>" method="post">
-        <input type="hidden" name="_method" value="patch">
-
-        <label for="title">Rename your project:</label>
-        <input type="text" name="title" id="title">
-
-        <button type="submit">Update Project</button>
+        <div class="form-group">
+          <label for="name" class="form-label">New volunteers name:</label>
+          <input type="text" name="name" class"form-control" id="name" autofocus>
+          <button type="submit" class="button btn">Add Volunteer</button>
+        </div>
       </form>
       <br>
       <form action="/project/<%= @project.id() %>" method="post">
-        <input name="_method" type="hidden" value="delete">
-        <label for="delete">Delete your project:</label>
-        <button type="submit">Delete Project</button>
+        <div class="form-group">
+          <input type="hidden" name="_method" value="patch">
+
+          <label for="title">Rename your project:</label>
+          <input type="text" name="title" id="title">
+
+          <button type="submit">Update Project</button>
+        </div>
+      </form>
+      <br>
+      <form action="/project/<%= @project.id() %>" method="post">
+        <div class="form-group">
+          <input name="_method" type="hidden" value="delete">
+          <label for="delete">Delete your project:</label>
+          <button type="submit">Delete Project</button>
+        </div>
       </form>
     </div>
   </div>
