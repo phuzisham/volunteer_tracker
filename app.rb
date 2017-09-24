@@ -4,9 +4,13 @@ require('./lib/project')
 require('./lib/volunteer')
 require('pry')
 require('pg')
+require 'uri'
 also_reload('lib/**/*.rb')
 
-DB = PG.connect({:dbname => "volunteer_tracker"})
+uri = URI.parse(ENV['DATABASE_URL'])
+DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
+
+# DB = PG.connect({:dbname => "volunteer_tracker"})
 
 get("/") do
   @projects = Project.all()

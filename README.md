@@ -1,6 +1,6 @@
 # _Volunteer Tracker_
 
-#### _A program that allows a user to add and track projects and volunteers. Last Modified: 09.22.2017_
+#### _A program that allows a user to add and track projects and volunteers. Last Modified: 09.24.2017_
 
 #### By _David Hale_
 
@@ -27,19 +27,27 @@ _After volunteers and projects are added they can then be managed in a database.
 
 1. _Download files [here](link)._
 
-2. _In terminal run 'ruby app.rb'._
+2. _In terminal run 'bundle'._
 
-3. _Use page in browser._
+3. _In terminal run 'postrgres'._
+
+4. _In terminal run 'createdb volunteer_tracker'._
+
+5. _In terminal run 'psql volunteer_tracker < my_database.sql'._
+
+6. _In terminal run 'ruby app.rb'._
+
+7. _Use page in browser._
 
 _Or use Heroku link: 'heroku link'_
 
 ## Support and contact details
 
-_If you have questions or run into any issues please email me at (david.hale7@gmail.com)_
+_If you have questions or run into any issues email me at: (david.hale7@gmail.com)_
 
 ## Technologies Used
 
-_Ruby, HTML, CSS, Bootstrap, Heroku, Sinatra._
+_Ruby, HTML, CSS, Bootstrap, Heroku, Sinatra, Postgres, SQL._
 
 ### License
 
