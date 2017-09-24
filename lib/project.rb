@@ -28,8 +28,8 @@ class Project
 
   def self.find(id)
     result = DB.exec("SELECT * FROM projects WHERE id = #{id};")
-    name = result.first().fetch("title")
-    Project.new({:title => name, :id => id})
+    title = result.first().fetch("title")
+    Project.new({:title => title, :id => id})
   end
 
   def volunteers
