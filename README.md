@@ -12,8 +12,14 @@ _After volunteers and projects are added they can then be managed in a database.
 
 | Description        | Input           | Output  |
 | ------------- |:-------------:| -----:|
-| First Description | First Input | First Output |
-
+| User can add a project to the database. | 'Teach JavaScript' | New project created with the title 'Teach Javascript'. |
+| User can click on project to see it's details and edit it. | Click On Project Link | Project detail page. |
+| User can add volunteers to project. | 'Kyle Smith' | 'Kyle Smith' is added to the project. |
+| User can rename project. | 'Teach Ruby' | Current project title changed to 'Teach Ruby' |
+| User can delete project. | Click on 'Delete Project' button. | Project is removed from the database. |
+| User can click on volunteer link to see their detail page. | Click on volunteer link. | Volunteer detail page. |
+| User can rename volunteer. | 'Kayla Smith' | Current volunteer's name changed to 'Kayla Smith' |
+| User can delete volunteer. | Click on 'Delete Volunteer' button. | Volunteer is removed from the database. |
 | Deployable with Heroku. | 'heroku link' | Opens page from Heroku. |
 
 
