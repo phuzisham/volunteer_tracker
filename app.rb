@@ -7,10 +7,11 @@ require('pg')
 require 'uri'
 also_reload('lib/**/*.rb')
 
-uri = URI.parse(ENV['DATABASE_URL'])
-DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
+# ----Database For Heroku----
+# uri = URI.parse(ENV['DATABASE_URL'])
+# DB = PG.connect(uri.hostname, uri.port, nil, nil, uri.path[1..-1], uri.user, uri.password)
 
-# DB = PG.connect({:dbname => "volunteer_tracker"})
+DB = PG.connect({:dbname => "volunteer_tracker"})
 
 get("/") do
   @projects = Project.all()

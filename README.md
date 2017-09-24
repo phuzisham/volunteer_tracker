@@ -20,12 +20,12 @@ _After volunteers and projects are added they can then be managed in a database.
 | User can click on volunteer link to see their detail page. | Click on volunteer link. | Volunteer detail page. |
 | User can rename volunteer. | 'Kayla Smith' | Current volunteer's name changed to 'Kayla Smith' |
 | User can delete volunteer. | Click on 'Delete Volunteer' button. | Volunteer is removed from the database. |
-| Deployable with Heroku. | 'heroku link' | Opens page from Heroku. |
+| Deployable with Heroku. | https://glacial-wave-41656.herokuapp.com | Opens page from Heroku. |
 
 
 ## Setup/Installation Requirements
 
-1. _Download files [here](link)._
+1. _Download files [here](https://github.com/phuzisham/volunteer_tracker.git)._
 
 2. _In terminal run 'bundle'._
 
@@ -39,11 +39,11 @@ _After volunteers and projects are added they can then be managed in a database.
 
 7. _Use page in browser._
 
-_Or use Heroku link: 'heroku link'_
+_Or use Heroku link: https://glacial-wave-41656.herokuapp.com_
 
 ## Support and contact details
 
-_If you have questions or run into any issues email me at: (david.hale7@gmail.com)_
+_If you have questions or run into any issues email me at: david.hale7@gmail.com_
 
 ## Technologies Used
 
