@@ -45,6 +45,8 @@ _Or use Heroku link: https://glacial-wave-41656.herokuapp.com_
 
 _If you have questions or run into any issues email me at: david.hale7@gmail.com_
 
+_Instructions on how to set up a Heroku database can be found[here](https://github.com/CodingTea17/viper-volunteers)_
+
 ## Technologies Used
 
 _Ruby, HTML, CSS, Bootstrap, Heroku, Sinatra, Postgres, SQL._
