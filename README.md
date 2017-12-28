@@ -1,12 +1,17 @@
 # _Volunteer Tracker_
 
-#### _A program that allows a user to add and track projects and volunteers. Last Modified: 09.24.2017_
+#### _Created: 09.22.2017_
+#### _Last Modified: 12.28.2017_
+
+#### _A program that allows a user to add and track projects and volunteers._
 
 #### By _David Hale_
 
 ## Description
 
 _After volunteers and projects are added they can then be managed in a database._
+
+![Screenshot](https://github.com/phuzisham/volunteer_tracker/blob/master/img/cap.png "Screen Capture")
 
 ## Specs
 
